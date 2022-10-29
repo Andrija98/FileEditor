@@ -71,10 +71,8 @@ public class PredlogKorisnickogInterfejsa extends JDialog {
         dispose();
     }
     private void transferSelectedText(JTextArea textArea) {
-        String topText = (textArea.getText());
+        String topText = (textArea.getSelectedText());
         textAreaNew.append(topText);
-        textArea.setText("");
-        System.out.println(textArea);
     }
     public void saveFile(String directory, String filename){
         if ((filename == null) || (filename.length() == 0))
